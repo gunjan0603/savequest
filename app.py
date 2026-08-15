@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, redirect, render_template, request, url_for, flash
+py --versionfrom flask import Flask, jsonify, redirect, render_template, request, url_for, flash
 from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 from config import Config
 from models import db, User, Goal, SavingsEntry, Friendship
@@ -161,4 +161,8 @@ def create_app(test_config=None):
 app = create_app()
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 5000))
+    )
