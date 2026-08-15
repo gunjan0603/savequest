@@ -1,0 +1,21 @@
+{% extends "base.html" %}{% block title %}SaveQuest — Make saving feel like a game{% endblock %}
+{% block content %}
+<section class="hero container">
+  <div class="hero-copy">
+    <div class="eyebrow">YOUR SAVING QUEST STARTS HERE</div>
+    <h1>Save money.<br><span>Score progress.</span></h1>
+    <p>SaveQuest turns saving into a positive game: set a goal, log what you save, earn points for progress and consistency, and climb the leaderboard with friends.</p>
+    <div class="hero-actions"><a class="btn primary" href="{{ url_for('signup') }}">Start my quest →</a><a class="btn ghost" href="{{ url_for('login') }}">I already have an account</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="mini-label">THIS WEEK</div><div class="hero-points">+50 <small>pts</small></div>
+    <div class="progress"><span style="width: 62%"></span></div><div class="mini-row"><span>New Laptop</span><strong>₹18,600 / ₹30,000</strong></div>
+    <div class="reward">✨ Consistency counts. Keep going.</div>
+  </div>
+</section>
+<section class="container feature-grid">
+  <article><div class="icon">🎯</div><h3>Goals that feel real</h3><p>Save toward something specific instead of watching an abstract balance.</p></article>
+  <article><div class="icon">⚡</div><h3>Instant feedback</h3><p>Every saving entry updates progress and points immediately.</p></article>
+  <article><div class="icon">🏆</div><h3>Friendly competition</h3><p>See how your points compare with a small group of friends.</p></article>
+</section>
+{% endblock %}
