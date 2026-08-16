@@ -1,4 +1,4 @@
-py --versionfrom flask import Flask, jsonify, redirect, render_template, request, url_for, flash
+from flask import Flask, jsonify, redirect, render_template, request, url_for, flash
 from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 from config import Config
 from models import db, User, Goal, SavingsEntry, Friendship
